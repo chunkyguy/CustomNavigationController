@@ -1,0 +1,140 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* CustomNavCtrlAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 478}}";
+			sepNavSelRange = "{387, 7}";
+			sepNavVisRange = "{0, 460}";
+		};
+	};
+	1D3623250D0F684500981E51 /* CustomNavCtrlAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 533}}";
+			sepNavSelRange = "{834, 0}";
+			sepNavVisRange = "{0, 902}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* CustomNavCtrl */ = {
+		activeExec = 0;
+		executables = (
+			EA7B4A6311461725005CD345 /* CustomNavCtrl */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = EA7B4A6311461725005CD345 /* CustomNavCtrl */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* CustomNavCtrl */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* CustomNavCtrl */,
+		);
+		codeSenseManager = EA7B4A6F11461744005CD345 /* Code sense */;
+		executables = (
+			EA7B4A6311461725005CD345 /* CustomNavCtrl */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 289806117;
+			PBXWorkspaceStateSaveDate = 289806117;
+		};
+		sourceControlManager = EA7B4A6E11461744005CD345 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	EA7B4A6311461725005CD345 /* CustomNavCtrl */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = CustomNavCtrl;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	EA7B4A6E11461744005CD345 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	EA7B4A6F11461744005CD345 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	EA7B4A701146174D005CD345 /* SJ_NavigationController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 455}}";
+			sepNavSelRange = "{487, 0}";
+			sepNavVisRange = "{0, 971}";
+		};
+	};
+	EA7B4A711146174D005CD345 /* SJ_NavigationController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 2327}}";
+			sepNavSelRange = "{2844, 0}";
+			sepNavVisRange = "{2335, 1066}";
+		};
+	};
+	EA7B4A7311461764005CD345 /* RootNavCtrl.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 478}}";
+			sepNavSelRange = "{227, 0}";
+			sepNavVisRange = "{0, 239}";
+		};
+	};
+	EA7B4A7411461764005CD345 /* RootNavCtrl.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 975}}";
+			sepNavSelRange = "{1070, 0}";
+			sepNavVisRange = "{373, 1083}";
+		};
+	};
+	EA7B4A7A11461C19005CD345 /* SubNavCtrl.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 478}}";
+			sepNavSelRange = "{183, 0}";
+			sepNavVisRange = "{0, 237}";
+		};
+	};
+	EA7B4A7B11461C19005CD345 /* SubNavCtrl.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 871}}";
+			sepNavSelRange = "{771, 0}";
+			sepNavVisRange = "{0, 922}";
+		};
+	};
+	EA7B4AA611462AE1005CD345 /* SJ_ViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 455}}";
+			sepNavSelRange = "{297, 0}";
+			sepNavVisRange = "{0, 384}";
+		};
+	};
+	EA7B4AA711462AE1005CD345 /* SJ_ViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 858}}";
+			sepNavSelRange = "{238, 0}";
+			sepNavVisRange = "{0, 893}";
+		};
+	};
+}
