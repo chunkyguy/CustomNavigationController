@@ -15,6 +15,7 @@
 @synthesize navBar;
 @synthesize containerVw;
 @synthesize topmostSJCtrl;
+@synthesize hidden;
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -61,7 +62,7 @@
 	self.navBar = aNavBar;
 	[aNavBar release];
 	
-
+	hidden = NO;
 	
 
 	
@@ -144,7 +145,21 @@
 	[controllers addObject:aCtrl];
 }
 
-
+-(void)setNavigationBarHidden:(BOOL)hide
+{
+	if(hide && !hidden)
+	{	
+		[self.containerVw setFrame:CGRectMake(0,-20,320,400)];
+		[self.view bringSubviewToFront:self.containerVw];
+		hidden = YES;
+	}	
+	else if(hidden)
+	{	
+		[self.containerVw setFrame:CGRectMake(0,[[UIApplication sharedApplication]isStatusBarHidden]?80:60,320,400)];
+		[self.view sendSubviewToBack:self.containerVw];
+		hidden = NO;
+	}
+}
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

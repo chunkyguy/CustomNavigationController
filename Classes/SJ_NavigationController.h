@@ -16,11 +16,13 @@
 	//int ctrlIndx;
 	UIView *containerVw;
 	SJ_ViewController *topmostSJCtrl;
+	BOOL hidden;
 }
 
 @property (nonatomic, retain) UINavigationBar *navBar;
 @property (nonatomic,retain) UIView *containerVw;
 @property (nonatomic, retain) SJ_ViewController *topmostSJCtrl;
+@property (nonatomic, assign) BOOL hidden;
 
 -(id)initWithRootSJController:(SJ_ViewController *)rootVwCtrl;
 -(SJ_ViewController *)loadTopView;
