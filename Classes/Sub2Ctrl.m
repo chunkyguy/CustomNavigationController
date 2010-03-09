@@ -29,6 +29,10 @@
 	[super loadView];
 	[self.view setBackgroundColor:[UIColor magentaColor]];
 	
+	UIBarButtonItem *logOffBtn = [[UIBarButtonItem alloc] initWithTitle:@"Log Off" style:UIBarButtonItemStyleBordered target:nil action:nil];
+	self.sjNavigationItem.rightBarButtonItem = logOffBtn;
+	[logOffBtn release];
+	
 	UIButton *popRoot = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 	[popRoot setTitle:@"pop <<<" forState:UIControlStateNormal];
 	[popRoot addTarget:self action:@selector(popToRoot) forControlEvents:UIControlEventTouchUpInside];

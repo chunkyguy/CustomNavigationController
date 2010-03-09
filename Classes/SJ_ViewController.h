@@ -12,6 +12,9 @@
 @interface SJ_ViewController : UIViewController {
 
 	SJ_NavigationController *sjNavigationController;
+	UINavigationItem *sjNavigationItem;
 }
 @property (nonatomic, retain) SJ_NavigationController *sjNavigationController;
+@property (nonatomic, retain, readonly) UINavigationItem *sjNavigationItem;
+
 @end
