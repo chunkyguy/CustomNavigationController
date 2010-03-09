@@ -40,6 +40,19 @@
 	[popRoot addTarget:self action:@selector(popToRoot) forControlEvents:UIControlEventTouchUpInside];
 	[popRoot setFrame:CGRectMake(0, 100, 80, 30)];
 	[self.view addSubview:popRoot];
+	
+	UIButton *showNav = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	[showNav setTitle:@"pop <<<" forState:UIControlStateNormal];
+	[showNav addTarget:self action:@selector(showHidNav) forControlEvents:UIControlEventTouchUpInside];
+	[showNav setFrame:CGRectMake(0, 150, 80, 30)];
+	[self.view addSubview:showNav];
+	
+	[self.sjNavigationController setNavigationBarHidden:YES];
+}
+
+-(void)showHidNav
+{
+	[self.sjNavigationController setNavigationBarHidden:NO];	
 }
 
 -(void)loadSubVw
