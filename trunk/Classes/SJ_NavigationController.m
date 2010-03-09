@@ -124,19 +124,26 @@
 	[self loadTopView];
 }
 
--(void)pushNavItemForSJCtrl:(SJ_ViewController *)ctrl animated:(BOOL)animie
+-(UINavigationItem *)createNavigationItemForCtrl:(SJ_ViewController *)ctrl
 {
-	UINavigationItem *aNavItem = [[UINavigationItem alloc] initWithTitle:[ctrl title]];
-	
+	UINavigationItem *aNavItem = [ctrl sjNavigationItem];
+	[aNavItem setTitle:[ctrl title]];
+//	UINavigationItem *aNavItem = [[UINavigationItem alloc] initWithTitle:[ctrl title]];
 	if([controllers count] > 1)
 	{		
-		UIBarButtonItem *backBtn = [[UIBarButtonItem alloc]initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(backItemAction)];
-		[aNavItem setLeftBarButtonItem:backBtn];
-		[backBtn release];
+		if(!aNavItem.leftBarButtonItem)
+		{
+			UIBarButtonItem *backBtn = [[UIBarButtonItem alloc]initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(backItemAction)];
+			[aNavItem setLeftBarButtonItem:backBtn];
+			[backBtn release];
+		}	
 	}
-	
-	[self.navBar pushNavigationItem:aNavItem animated:animie];
-	[aNavItem release];		
+	return aNavItem;
+}
+
+-(void)pushNavItemForSJCtrl:(SJ_ViewController *)ctrl animated:(BOOL)animie
+{
+	[self.navBar pushNavigationItem:[self createNavigationItemForCtrl:ctrl] animated:animie];
 }
 
 -(void)_pushSJController:(SJ_ViewController *)aCtrl
