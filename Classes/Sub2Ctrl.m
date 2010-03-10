@@ -2,8 +2,7 @@
 //  Sub2Ctrl.m
 //  CustomNavCtrl
 //
-//  Created by MfinoMBP on 09/03/10.
-//  Copyright 2010 mFino. All rights reserved.
+//  Created by Sidharth on 09/03/10.
 //
 
 #import "Sub2Ctrl.h"
@@ -33,11 +32,20 @@
 	self.sjNavigationItem.rightBarButtonItem = logOffBtn;
 	[logOffBtn release];
 	
+	UIBarButtonItem *myBackBtn = [[UIBarButtonItem alloc] initWithTitle:@"<-" style:UIBarButtonItemStyleBordered target:self action:@selector(myPop)];
+	self.sjNavigationItem.leftBarButtonItem = myBackBtn;
+	[myBackBtn release];
+	
 	UIButton *popRoot = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[popRoot setTitle:@"pop <<<" forState:UIControlStateNormal];
+	[popRoot setTitle:@"pop to root" forState:UIControlStateNormal];
 	[popRoot addTarget:self action:@selector(popToRoot) forControlEvents:UIControlEventTouchUpInside];
-	[popRoot setFrame:CGRectMake(0, 100, 80, 30)];
+	[popRoot setFrame:CGRectMake(0, 100, 200, 30)];
 	[self.view addSubview:popRoot];
+}
+
+-(void)myPop
+{
+	[self.sjNavigationController popSJControllerAnimated:YES];
 }
 
 -(void)popToRoot

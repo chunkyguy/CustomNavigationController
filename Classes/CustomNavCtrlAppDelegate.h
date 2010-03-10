@@ -2,8 +2,7 @@
 //  CustomNavCtrlAppDelegate.h
 //  CustomNavCtrl
 //
-//  Created by MfinoMBP on 09/03/10.
-//  Copyright mFino 2010. All rights reserved.
+//  Created by Sidharth on 09/03/10.
 //
 
 #import <UIKit/UIKit.h>

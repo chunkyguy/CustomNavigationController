@@ -2,8 +2,7 @@
 //  SubNavCtrl.m
 //  CustomNavCtrl
 //
-//  Created by MfinoMBP on 09/03/10.
-//  Copyright 2010 mFino. All rights reserved.
+//  Created by Sidharth on 09/03/10.
 //
 
 #import "SubNavCtrl.h"
@@ -30,29 +29,31 @@
 	[self.view setBackgroundColor:[UIColor blueColor]];
 	
 	UIButton *subBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[subBtn setTitle:@"load >>" forState:UIControlStateNormal];
+	[subBtn setTitle:@"load next" forState:UIControlStateNormal];
 	[subBtn addTarget:self action:@selector(loadSubVw) forControlEvents:UIControlEventTouchUpInside];
-	[subBtn setFrame:CGRectMake(0, 50, 80, 30)];
+	[subBtn setFrame:CGRectMake(0, 50, 200, 30)];
 	[self.view addSubview:subBtn];
 	
 	UIButton *popRoot = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[popRoot setTitle:@"pop <<<" forState:UIControlStateNormal];
+	[popRoot setTitle:@"pop to root" forState:UIControlStateNormal];
 	[popRoot addTarget:self action:@selector(popToRoot) forControlEvents:UIControlEventTouchUpInside];
-	[popRoot setFrame:CGRectMake(0, 100, 80, 30)];
+	[popRoot setFrame:CGRectMake(0, 100, 200, 30)];
 	[self.view addSubview:popRoot];
 	
 	UIButton *showNav = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[showNav setTitle:@"pop <<<" forState:UIControlStateNormal];
-	[showNav addTarget:self action:@selector(showHidNav) forControlEvents:UIControlEventTouchUpInside];
-	[showNav setFrame:CGRectMake(0, 150, 80, 30)];
+	[showNav setTitle:@"show navigation bar" forState:UIControlStateNormal];
+	[showNav addTarget:self action:@selector(showHidNav:) forControlEvents:UIControlEventTouchUpInside];
+	[showNav setFrame:CGRectMake(0, 150, 200, 30)];
 	[self.view addSubview:showNav];
 	
 	[self.sjNavigationController setNavigationBarHidden:YES];
 }
 
--(void)showHidNav
+-(void)showHidNav:(UIButton *)btn
 {
-	[self.sjNavigationController setNavigationBarHidden:NO];	
+	BOOL isNavHidden = [self.sjNavigationController hidden];	
+	[self.sjNavigationController setNavigationBarHidden:!isNavHidden];	
+	[btn setTitle:[NSString stringWithFormat:@"%@ navigation bar",isNavHidden?@"Hide":@"Show"] forState:UIControlStateNormal];
 }
 
 -(void)loadSubVw

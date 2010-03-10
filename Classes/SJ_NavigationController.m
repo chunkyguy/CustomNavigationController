@@ -2,8 +2,7 @@
 //  SJ_NavigationController.m
 //  CustomNavCtrl
 //
-//  Created by MfinoMBP on 09/03/10.
-//  Copyright 2010 mFino. All rights reserved.
+//  Created by Sidharth on 09/03/10.
 //
 
 #import "SJ_NavigationController.h"
@@ -58,6 +57,7 @@
 	[aImgVw release];
 	
 	UINavigationBar *aNavBar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 40, 320, 44)];
+	[aNavBar setDelegate:self];
 	[self.view addSubview:aNavBar];
 	self.navBar = aNavBar;
 	[aNavBar release];
@@ -104,9 +104,13 @@
 
 - (SJ_ViewController *)popSJControllerAnimated:(BOOL)animated
 {
+	NSLog(@"popSJControllerAnimated >>");
 	[self.navBar popNavigationItemAnimated:animated];
-	[self _popSJController];
-	return [self loadTopView];
+//	[self _popSJController];
+	NSLog(@"popSJControllerAnimated <<");
+	return [self _topSJController];
+	
+	//return [self loadTopView];
 }
 
 -(void)_popSJController
@@ -134,7 +138,7 @@
 		if(!aNavItem.leftBarButtonItem)
 		{
 			UIBarButtonItem *backBtn = [[UIBarButtonItem alloc]initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(backItemAction)];
-			[aNavItem setLeftBarButtonItem:backBtn];
+			[aNavItem setBackBarButtonItem:backBtn];
 			[backBtn release];
 		}	
 	}
@@ -201,5 +205,20 @@
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark UINavigationBar methods
+- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item
+{
+	NSLog(@"shouldPopItem");
+	[self _popSJController];
+	[self loadTopView];
+	return YES;
+}
+
+- (void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item
+{
+	NSLog(@"didPopItem");
+	//[self _popSJController];
+}
 
 @end
