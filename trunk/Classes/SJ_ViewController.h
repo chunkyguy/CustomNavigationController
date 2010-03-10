@@ -2,8 +2,7 @@
 //  SJ_ViewController.h
 //  CustomNavCtrl
 //
-//  Created by MfinoMBP on 09/03/10.
-//  Copyright 2010 mFino. All rights reserved.
+//  Created by Sidharth on 09/03/10.
 //
 
 #import <UIKit/UIKit.h>
