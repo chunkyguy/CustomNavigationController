@@ -32,13 +32,13 @@
 	UIButton *subBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 	[subBtn setTitle:@"load next" forState:UIControlStateNormal];
 	[subBtn addTarget:self action:@selector(loadSubVw) forControlEvents:UIControlEventTouchUpInside];
-	[subBtn setFrame:CGRectMake(0, 0, 200, 30)];
+	[subBtn setFrame:CGRectMake(0, 100, 200, 30)];
 	[self.view addSubview:subBtn];
 	
 	UIButton *popRoot = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 	[popRoot setTitle:@"pop to root" forState:UIControlStateNormal];
 	[popRoot addTarget:self action:@selector(popToRoot) forControlEvents:UIControlEventTouchUpInside];
-	[popRoot setFrame:CGRectMake(0, 100, 200, 30)];
+	[popRoot setFrame:CGRectMake(0, 200, 200, 30)];
 	[self.view addSubview:popRoot];
 }
 
